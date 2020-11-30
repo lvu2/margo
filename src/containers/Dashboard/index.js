@@ -1,33 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.scss';
 import { getUser, removeUserSession } from '../../Utils/Common';
+import { useHistory } from 'react-router-dom';
 
-class Dashboard extends React.Component {
-	constructor( props ) {
-		super(props);
-		this.handleLogout = this.handleLogout.bind(this);
-		this.state = { user: "" };
-	}
+function Dashboard() {
+	const history = useHistory();
+	const [ dashboardState, setDashboardState ] = useState({
+		user: ""
+	})
 
-	componentDidMount(){
+	useEffect(() => {
 		const user = getUser();
-		this.setState({ user: getUser() });
-	}
+		setDashboardState({ user: user });
+	}, [])
 
-	handleLogout() {
+	const handleLogout = () => {
 		removeUserSession();
-		this.props.history.push('/signin');
+		history.push('/signin');
 	}
 
-	render() {
-		return(
-			<div>
-				Welcome {this.state.user}<br /><br />
-				<input type="button" onClick={this.handleLogout} value="Logout"/>
-			</div>
-		);
-	}
-
+	return(
+		<div>
+			Welcome {dashboardState.user}<br /><br />
+			<input type="button" onClick={handleLogout} value="Logout"/>
+		</div>
+	);
 }
 
 export default Dashboard;
