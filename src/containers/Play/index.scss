@@ -1,0 +1,290 @@
+@mixin header-link-style($width) {
+	padding-left: 10px;
+	position: absolute;
+	font-size: 60px;
+	font-family: 'Montserrat', sans-serif;
+ 	font-weight: 100;
+ 	width: $width;
+  	transition: color .4s ease-out;
+}
+
+ @mixin bg-effect($scale, $x-origin, $y-origin) {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute; 
+  	transform: scaleX($scale);
+  	transition: transform .4s linear;
+  	transform-origin: $x-origin $y-origin;
+}
+
+@mixin content-link($right) {
+	z-index: 1;
+	position: absolute;
+	top: 45%;
+	width: auto;
+	right: $right;
+	margin-right: -30px;
+	margin-left: auto;
+	left: auto;
+}
+
+.play {
+	width: 100%;
+	height: 615px;
+	position: relative;
+}
+
+.play-home-link {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	color: white;
+	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+ 	font-weight: 100;
+
+}
+
+.play-title {
+	position: absolute;
+	top: 35%;
+	left: 40%;
+	color: white;
+	font-size: 120px;
+	font-family: 'Montserrat', sans-serif;
+ 	font-weight: 100;
+}
+
+.top-play-img-banner {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: 50% 0;
+}
+
+.item {
+	margin-bottom: 52px;
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+.item-left {
+	margin-bottom: 52px;
+	padding-left: 26px;
+	padding-right: 26px;
+	margin-left: 50%;
+}
+
+.play-text-background{
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+  	.text-background-effect {
+  		@include bg-effect(0, 0, 50%);
+  	}
+  	.text-background-effect-right {
+  		@include bg-effect(0, 100%, 50%);
+  	}
+}
+
+.play-container {
+	padding-top: 95px;
+    padding-bottom: 113px;
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.image-info-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	.image-info {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		opacity: 0;
+		transition: .3s all linear;
+	  	clip-path: inset(10px 10px 10px 10px);
+	}
+	&:hover .image-info{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background-color: white;
+		opacity: .8;
+		transition: .3s all linear;
+	  	clip-path: inset(10px 10px 10px 10px);
+	}
+	&:hover h3 {
+		bottom: 50px;
+	}
+	h3 {
+		position: absolute;
+		bottom: 20px;
+		left: 30px;
+		transition: .3s all linear;
+		font-weight: bold;
+	}
+	h5 {
+		position: absolute;
+		bottom: 20px;
+		left: 30px;
+		font-weight: 50;
+	}
+}
+
+.quite-an-eye-link {
+	@include content-link(17%);
+	.quite-an-eye-header {
+		@include header-link-style(440px);
+  		&:hover {
+			color: white;
+		}
+	}
+}
+
+.quite-an-eye-header:hover .text-background-effect{
+	@include bg-effect(1, 100%, 50%);
+}
+
+.house-call-link {
+	@include content-link(167%);
+	.house-call-header {
+		@include header-link-style(415px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.house-call-header:hover .text-background-effect-right{
+	@include bg-effect(1, 0, 50%);
+}
+
+.make-cake-link {
+	@include content-link(17%);
+	.make-cake-header {
+		@include header-link-style(380px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.make-cake-header:hover .text-background-effect{
+	@include bg-effect(1, 100%, 50%);
+}
+
+.argh-link {
+	@include content-link(130%);
+	.argh-header {
+		@include header-link-style(195px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.argh-header:hover .text-background-effect-right{
+	@include bg-effect(1, 0, 50%);
+}
+
+.in-the-cards-link {
+	@include content-link(17%);
+	.in-the-cards-header {
+		@include header-link-style(450px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.in-the-cards-header:hover .text-background-effect{
+	@include bg-effect(1, 100%, 50%);
+}
+
+.gifted-link {
+	@include content-link(138%);
+	.gifted-header {
+		@include header-link-style(245px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.gifted-header:hover .text-background-effect-right{
+	@include bg-effect(1, 0, 50%);
+}
+
+.homeface-link {
+	@include content-link(17%);
+	.homeface-header {
+		@include header-link-style(380px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.homeface-header:hover .text-background-effect{
+	@include bg-effect(1, 100%, 50%);
+}
+
+.woody-link {
+	@include content-link(142%);
+	.woody-header {
+		@include header-link-style(270px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.woody-header:hover .text-background-effect-right{
+	@include bg-effect(1, 0, 50%);
+}
+
+.branch-out-link {
+	@include content-link(17%);
+	.branch-out-header {
+		@include header-link-style(440px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.branch-out-header:hover .text-background-effect{
+	@include bg-effect(1, 100%, 50%);
+}
+
+.books-link {
+	@include content-link(138%);
+	.books-header {
+		@include header-link-style(245px);
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.books-header:hover .text-background-effect-right{
+	@include bg-effect(1, 0, 50%);
+}

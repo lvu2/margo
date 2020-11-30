@@ -1,0 +1,268 @@
+@mixin header-link-style($width) {
+	padding-left: 10px;
+	position: absolute;
+	font-size: 60px;
+	font-family: 'Montserrat', sans-serif;
+ 	font-weight: 100;
+ 	width: $width;
+  	transition: color .4s ease-out;
+}
+
+ @mixin bg-effect($scale, $x-origin, $y-origin) {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute; 
+  	transform: scaleX($scale);
+  	transition: transform .4s linear;
+  	transform-origin: $x-origin $y-origin;
+}
+
+@mixin content-link($right) {
+	z-index: 1;
+	position: absolute;
+	top: 45%;
+	width: auto;
+	right: $right;
+	margin-right: -30px;
+	margin-left: auto;
+	left: auto;
+}
+
+.work {
+	width: 100%;
+	height: 615px;
+	position: relative;
+}
+
+.work-home-link {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	color: white;
+	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+ 	font-weight: 100;
+
+}
+
+.work-title {
+	position: absolute;
+	top: 35%;
+	left: 40%;
+	color: white;
+	font-size: 120px;
+	font-family: 'Montserrat', sans-serif;
+ 	font-weight: 100;
+}
+
+.top-img-banner {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: 50% 0;
+}
+.work-container {
+	padding-top: 95px;
+    padding-bottom: 113px;
+}
+
+.item {
+	margin-bottom: 52px;
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+.image-info-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	.image-info {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		transition: .3s all linear;
+	  	clip-path: inset(10px 10px 10px 10px);
+	}
+	&:hover .image-info{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background-color: white;
+		opacity: .8;
+		transition: .3s all linear;
+	  	clip-path: inset(10px 10px 10px 10px);
+	}
+	&:hover h3 {
+		bottom: 50px;
+	}
+	h3 {
+		position: absolute;
+		bottom: 20px;
+		left: 30px;
+		transition: .3s all linear;
+		font-weight: bold;
+	}
+	h5 {
+		position: absolute;
+		bottom: 20px;
+		left: 30px;
+		font-weight: 50;
+	}
+}
+
+.text-background{
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+  	.text-background-effect {
+	  	@include bg-effect(0, 0, 50%);
+  	}
+  	.text-background-effect-right {
+	  	@include bg-effect(0, 100%, 50%);
+  	}
+}
+
+.montage {
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.montagelink {
+	@include content-link(12%);
+	.montage-header {
+		@include header-link-style(350px);
+		&:hover {
+		  	color: white;
+		}
+	}
+}
+
+.montage-header:hover .text-background-effect{
+  	@include bg-effect( 1, 100%, 50% );
+}
+
+.featured {
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.featuredlink {
+	@include content-link(142%);
+	.featured-header {
+	  	@include header-link-style(350px);
+	  	&:hover {
+		  	color: white;
+		}
+	}
+}
+
+.featured-header:hover .text-background-effect-right{
+	@include bg-effect( 1, 0%, 50% );
+}
+
+.beauty {
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.beautylink {
+	@include content-link(12%);
+	.beauty-header {
+		@include header-link-style(270px);
+		&:hover {
+		 	color: white;
+		}
+	}
+}
+
+.beauty-header:hover .text-background-effect{
+  	@include bg-effect( 1, 100%, 50% );
+}
+
+.specialty {
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.specialtylink {
+	@include content-link(12%);
+	.specialty-header {
+		@include header-link-style(345px);
+		&:hover {
+		 	color: white;
+		}
+	}
+}
+
+.specialty-header:hover .text-background-effect{
+  	@include bg-effect( 1, 100%, 50% );
+}
+
+.editorial {
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.editoriallink {
+	@include content-link(12%);
+	.editorial-header {
+		@include header-link-style(350px);
+		&:hover {
+		 	color: white;
+		}
+	}
+}
+
+.editorial-header:hover .text-background-effect{
+  	@include bg-effect( 1, 100%, 50% );
+}
+
+.campaign {
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.campaignlink {
+	@include content-link(142%);
+	.campaign-header {
+		@include header-link-style(355px);
+		&:hover {
+		 	color: white;
+		}
+	}
+}
+
+.campaign-header:hover .text-background-effect-right{
+  	@include bg-effect( 1, 0%, 50% );
+}

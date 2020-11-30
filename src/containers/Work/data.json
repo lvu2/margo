@@ -1,0 +1,438 @@
+{
+	"work_list": [
+		{
+			"name": "montage",
+			"img_list": [
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "montage_01.jpg",
+					"header_text": "MONTAGE",
+					"link_class_name": "montagelink",
+					"effect": "",
+					"info_top_text": "Montage Reel",
+					"info_bottom_text": "VIEW FILM"
+				}
+			]
+		},
+		{
+			"name": "featured",
+			"img_list": [
+				{
+					"xs": 12,
+					"sm": 3,
+					"md": 4,
+					"url": ""
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "featured_01.jpg",
+					"header_text": "FEATURED",
+					"link_class_name": "featuredlink",
+					"effect": "-right",
+					"info_top_text": "Legacy: The Thigh High Chapter",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "featured_02.jpg",
+					"info_top_text": "Zales / Monroe Collection",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "featured_03.jpg",
+					"info_top_text": "Olay / Noir",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_07.jpg",
+					"info_top_text": "Olay / Crush",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "featured_04.jpg",
+					"info_top_text": "Coppertone / Clear",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "featured_05.jpg",
+					"info_top_text": "Garnier Nutrisse / Changes",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_06.jpg",
+					"info_top_text": "Downy / Memorable Day",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_08.jpg",
+					"info_top_text": "Downy / Rip Your Clothes Off",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_09.jpg",
+					"info_top_text": "Herbal Essences / Let Life In",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_10.jpg",
+					"info_top_text": "JC Penney / Oscars Campaign",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_11.jpg",
+					"info_top_text": "Chanel / Venice",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_12.jpg",
+					"info_top_text": "Missoni / Spin a Yarn",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_13.jpg",
+					"info_top_text": "Winners / Big Finds",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "featured_14.jpg",
+					"info_top_text": "Hershey's / On Everything",
+					"info_bottom_text": "VIEW FILM"
+				}
+			]
+		},
+		{
+			"name": "beauty",
+			"img_list": [
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "beauty_01.jpg",
+					"header_text": "BEAUTY",
+					"link_class_name": "beautylink",
+					"effect": "",
+					"info_top_text": "Olay / Regernerist",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+
+					"xs": 12,
+					"sm": 3,
+					"md": 4,
+					"url": ""
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "beauty_02.jpg",
+					"info_top_text": "Clairol / Bloom",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "beauty_03.jpg",
+					"info_top_text": "York / Juno",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "beauty_04.jpg",
+					"info_top_text": "Neiman Marcus / Fragrance",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "beauty_05.jpg",
+					"info_top_text": "Olay / Glow",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "beauty_06.jpg",
+					"info_top_text": "Histoire d' Or / The Thank You",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "beauty_07.jpg",
+					"info_top_text": "Clinique / Can Can",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "beauty_08.jpg",
+					"info_top_text": "Clairol / A Shade Braver",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "beauty_09.jpg",
+					"info_top_text": "Olay / Eyes",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "beauty_10.jpg",
+					"info_top_text": "Olay / Whips",
+					"info_bottom_text": "VIEW FILM"
+				}
+			]
+		},
+		{
+			"name": "specialty",
+			"img_list": [
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "specialty_01.jpg",
+					"header_text": "SPECIALTY",
+					"link_class_name": "specialtylink",
+					"effect": "",
+					"info_top_text": "Neiman Marcus / Art of Play",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "specialty_02.jpg",
+					"info_top_text": "Regina Spektor / How",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "specialty_03.jpg",
+					"info_top_text": "Neiman Marcus / Phat Albert",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "specialty_04.jpg",
+					"info_top_text": "Ulta / Trading Faces",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "specialty_05.jpg",
+					"info_top_text": "JC Penney / CMA",
+					"info_bottom_text": "VIEW FILM"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "specialty_06.jpg",
+					"info_top_text": "Neiman Marcus / Split Decision",
+					"info_bottom_text": "VIEW FILM"
+				}
+			]
+		},
+		{
+			"name": "editorial",
+			"img_list": [
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "editorial_01.png",
+					"header_text": "EDITORIAL",
+					"link_class_name": "editoriallink",
+					"effect": "",
+					"info_top_text": "Legacy",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+
+					"xs": 12,
+					"sm": 3,
+					"md": 4,
+					"url": ""
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "editorial_02.jpg",
+					"info_top_text": "Man Up",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "editorial_03.jpg",
+					"info_top_text": "Bike",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "editorial_04.png",
+					"info_top_text": "Brew",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "editorial_05.jpg",
+					"info_top_text": "Cereal Number",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "editorial_06.jpg",
+					"info_top_text": "A+U",
+					"info_bottom_text": "VIEW PHOTOS"
+				}
+			]
+		},
+		{
+			"name": "campaign",
+			"img_list": [
+				{
+					"xs": 12,
+					"sm": 3,
+					"md": 4,
+					"url": ""
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "campaign_01.jpg",
+					"header_text": "CAMPAIGN",
+					"link_class_name": "campaignlink",
+					"effect": "-right",
+					"info_top_text": "Zales",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "campaign_02.jpg",
+					"info_top_text": "Feed",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "campaign_03.jpg",
+					"info_top_text": "Axe",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 9,
+					"md": 8,
+					"url": "campaign_04.jpg",
+					"info_top_text": "Go Scout",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "campaign_05.jpg",
+					"info_top_text": "Neiman Marcus The Book",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "campaign_06.jpg",
+					"info_top_text": "Skin",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "campaign_07.jpg",
+					"info_top_text": "Kohl's",
+					"info_bottom_text": "VIEW PHOTOS"
+				},
+				{
+					"xs": 12,
+					"sm": 6,
+					"md": 4,
+					"url": "campaign_08.jpg",
+					"info_top_text": "Downy",
+					"info_bottom_text": "VIEW PHOTOS"
+				}
+			]
+		}
+	]
+}

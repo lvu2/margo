@@ -1,0 +1,124 @@
+{
+	"play_list": [
+		{
+			"url": "play_01.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "QUITE AN EYE",
+			"name": "quite-an-eye",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Quite An Eye",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_02.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "HOUSE CALL",
+			"name": "house-call",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "House Call",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_03.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "MAKE CAKE",
+			"name": "make-cake",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Make Cake",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_04.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "ARGH",
+			"name": "argh",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Argh",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_05.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "IN THE CARDS",
+			"name": "in-the-cards",
+			"item": "",
+			"effect": "",
+			"info_top_text": "In The Cards",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_06.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "GIFTED",
+			"name": "gifted",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Gifted",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_07.png",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "HOMEFACE",
+			"name": "homeface",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Homeface",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_08.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "WOODY",
+			"name": "woody",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Woody",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_09.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "BRANCH OUT",
+			"name": "branch-out",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Branch Out",
+			"info_bottom_text": "SHOW ME"
+		},
+		{
+			"url": "play_10.png",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "BOOKS",
+			"name": "books",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Published Books",
+			"info_bottom_text": "SHOW ME"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+.about {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex; /* make each flex item a flex container, as well */
+	align-items: center; /* center text vertically (in this case) */
+	justify-content: center;  /* center text horizontally (in this case) */
+	flex-direction: column;
+}
+
+.about p {
+	color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 20px;
+    line-height: 32px;
+}

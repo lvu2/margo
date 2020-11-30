@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.nav-button {z-index: 2;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+.nav-button.fixed{
+  position: fixed;
+}
+.bar1, .bar2, .bar3 {
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  margin: 23% 0;
+  transition: 0.4s;
+}
+
+.change.bar1 {
+  -webkit-transform: rotate(-45deg) translate(-14px, 13px);
+  transform: rotate(-45deg) translate(-14px, 13px);
+}
+
+.change.bar2 {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+.change.bar3 {
+  -webkit-transform: rotate(45deg) translate(-15px, -15px);
+  transform: rotate(45deg) translate(-15px, -15px);
+}
+
+.side-nav-bg {z-index: 1;
+  position: fixed;
+  width: 100%;
+  text-align:center;
+  display: flex; /* establish flex container */
+  flex-direction: column;
+  height: 100%;
+  background: black;
+  transition: transform .5s ease-in;
+  transform-origin: right top;top: 0px;
+}
+
+.side-nav {z-index: 2;
+  position: fixed;
+  width: 0%;
+  text-align:center;
+  display: flex; /* establish flex container */
+  flex-direction: column;
+  height: 100%;
+  right: 0;
+  transition: width .3s ease-in-out;top: 0px;
+}
+
+.side-nav ul{
+  flex: 1; /* distribute all available space evenly among flex items */
+  display: flex; /* make each flex item a flex container, as well */
+  align-items: center; /* center text vertically (in this case) */
+  justify-content: center;  /* center text horizontally (in this case) */
+  flex-direction: column;
+  list-style-type: none;
+}
+
+a.nav-link {
+  color: white;
+  text-decoration: none;
+  /*font: 68px Sevigne-Regular;*/
+  font-family: 'Montserrat', sans-serif;
+  font-size: 68px;
+  font-weight: 100;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+a.nav-link.selected {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
