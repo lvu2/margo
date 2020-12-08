@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom';
 
 const TopImgBanner = () => {
 	return (
-		<img className='top-play-img-banner' src={require('../../media/play/Margo-Weathers-Play-Masthead-2.jpg')}>
-		</img>
+		<div className='top-featured-img-banner'>
+		</div>
 	);
 }
 
@@ -23,26 +23,26 @@ const SideViewer = (props) => {
 				<div className='right-bar' />
 			</div>
 			<div className="viewer-image-container">
-				<img style={{ opacity: `${(props.openviewer == "1") ? 1: 0}`, transition: `opacity ${(props.openviewer == "1") ? "1.0s": ".2s"} ease-in` }} src={require(`../../media/play/${props.url ? props.url : "play_01.jpg"}`)}>
+				<img style={{ opacity: `${(props.openviewer == "1") ? 1: 0}`, transition: `opacity ${(props.openviewer == "1") ? "1.0s": ".2s"} ease-in` }} src={require(`../../media/work/${props.url ? props.url : "featured/featured_01.jpg"}`)}>
 				</img>
 			</div>
 		</div>
 	);
 }
 
-function Play() {
+function Featured() {
 	const scrollArr = [];
 	const rowRef = useRef(null);
 
-	const [ playState, setPlayState ] = useState({
+	const [ featuredState, setFeaturedState ] = useState({
 		openViwer: false,
-		viewerUrl: "play_01.jpg"
+		viewerUrl: "featured/featured_01.jpg"
 	});
 
 	const handleViewerClick = (event) => {
-		setPlayState({...playState,
-					  openViwer: !playState.openViwer,
-					  viewerUrl: event.currentTarget.getAttribute('url') ? event.currentTarget.getAttribute('url') : playState.viewerUrl
+		setFeaturedState({...featuredState,
+					  openViwer: !featuredState.openViwer,
+					  viewerUrl: event.currentTarget.getAttribute('url') ? event.currentTarget.getAttribute('url') : featuredState.viewerUrl
 					});
 	}
 
@@ -106,26 +106,26 @@ function Play() {
     }, [])
 
 	return (
-		<div /*onScroll={debounce(checkSlide)}*/>
-			<div className='play'>
+		<div>
+			<div className='featured-page'>
 				<TopImgBanner />
-				<div className='play-title-container'>
-					<div className='play-title'>PLAY</div>
+				<div className='featured-title-container'>
+					<div className='featured-title'>FEATURED</div>
 				</div>
-				<div className='play-home-link'>
-					<Link to ='/' style={{ textDecoration: 'none', color: 'white' }}>
+				<div className='featured-home-link'>
+					<Link to ='/' style={{ textDecoration: 'none', color: 'black' }}>
 						MARGO
 					</Link>
 				</div>
 			</div>
 
-			<Container className="play-container">
+			<Container className="featured-container">
 				<Row ref={rowRef}>
 					{data.play_list.map((play_item, i) => {
 						return(
 							<Col key={play_item.url} className={`item${play_item.item}`} xs={12} sm={7} md={6}>
-								<div scrolltransitiontype="image" onClick={handleViewerClick} url={play_item.url} className={"scroll-img-ele"}>
-									<img src={require(`../../media/play/${play_item.url}`)}>
+								<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`featured/${play_item.url}`} style={{position: "relative"}}>
+									<img src={require(`../../media/work/featured/${play_item.url}`)}>
 									</img>
 									<div className="image-info-container">
 										<div className='image-info'>
@@ -134,11 +134,11 @@ function Play() {
 										</div>
 									</div>
 								</div>
-								<div scrolltransitiontype="text" onClick={handleViewerClick} url={play_item.url} className={`${play_item.name}-link`}>
+								<div scrolltransitiontype="text" onClick={handleViewerClick} url={`featured/${play_item.url}`} className={`${play_item.name}-link`}>
 									<div style={{ textDecoration: 'none', color: 'black' }}>
 										<span>
 											<h2 className={`${play_item.name}-header`}>{play_item.text}
-												<div className="play-text-background">
+												<div className="featured-text-background">
 													<div className={`text-background-effect${play_item.effect}`}>
 													</div>
 												</div>
@@ -151,9 +151,9 @@ function Play() {
 					})}
 				</Row>
 			</Container>
-			<SideViewer handleViewerClick={handleViewerClick} url={playState.viewerUrl} openviewer={ playState.openViwer ? '1' : '0' } />
+			<SideViewer handleViewerClick={handleViewerClick} url={featuredState.viewerUrl} openviewer={ featuredState.openViwer ? '1' : '0' } />
 		</div>
 	)
 }
 
-export default Play;
+export default Featured;

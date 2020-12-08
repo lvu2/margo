@@ -48,14 +48,26 @@
 
 }
 
-.work-title {
+.work-title-container {
+	width: 100%;
+	height: 100%;
 	position: absolute;
-	top: 35%;
-	left: 40%;
-	color: white;
-	font-size: 120px;
-	font-family: 'Montserrat', sans-serif;
- 	font-weight: 100;
+	top: 0;
+	left: 0;
+	display: table;
+	text-align: center;
+	vertical-align: middle;
+	.work-title {
+		// position: absolute;
+		// top: 35%;
+		// left: 40%;
+		display: table-cell;
+		vertical-align: middle;
+		color: white;
+		font-size: 120px;
+		font-family: 'Montserrat', sans-serif;
+	 	font-weight: 100;
+	}
 }
 
 .top-img-banner {
@@ -67,6 +79,17 @@
 .work-container {
 	padding-top: 95px;
     padding-bottom: 113px;
+}
+
+.scroll-img-ele {
+	position: relative;
+	transform: translate(0px, 100px);
+	opacity: 0;
+	&.active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		transition: all 1s ease-in;
+	}
 }
 
 .item {
@@ -101,17 +124,17 @@
 		transition: .3s all linear;
 	  	clip-path: inset(10px 10px 10px 10px);
 	}
-	&:hover h3 {
+	&:hover h4 {
 		bottom: 50px;
 	}
-	h3 {
+	h4 {
 		position: absolute;
 		bottom: 20px;
 		left: 30px;
 		transition: .3s all linear;
 		font-weight: bold;
 	}
-	h5 {
+	p {
 		position: absolute;
 		bottom: 20px;
 		left: 30px;
@@ -146,9 +169,14 @@
 .montagelink {
 	@include content-link(12%);
 	.montage-header {
+		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(350px);
 		&:hover {
 		  	color: white;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
 		}
 	}
 }
@@ -168,9 +196,14 @@
 .featuredlink {
 	@include content-link(142%);
 	.featured-header {
+		clip-path: inset(0% 100% 0% 0%);
 	  	@include header-link-style(350px);
 	  	&:hover {
 		  	color: white;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
 		}
 	}
 }
@@ -190,9 +223,14 @@
 .beautylink {
 	@include content-link(12%);
 	.beauty-header {
+		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(270px);
 		&:hover {
 		 	color: white;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
 		}
 	}
 }
@@ -212,9 +250,14 @@
 .specialtylink {
 	@include content-link(12%);
 	.specialty-header {
+		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(345px);
 		&:hover {
 		 	color: white;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
 		}
 	}
 }
@@ -234,9 +277,14 @@
 .editoriallink {
 	@include content-link(12%);
 	.editorial-header {
+		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(350px);
 		&:hover {
 		 	color: white;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
 		}
 	}
 }
@@ -256,9 +304,14 @@
 .campaignlink {
 	@include content-link(142%);
 	.campaign-header {
+		clip-path: inset(0% 100% 0% 0%);
 		@include header-link-style(355px);
 		&:hover {
 		 	color: white;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
 		}
 	}
 }

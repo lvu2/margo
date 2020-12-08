@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './index.scss';
 import data from './data';
 
@@ -15,20 +15,124 @@ const TopImgBanner = () => {
 	);
 }
 
+const SideViewer = (props) => {
+	return(
+		<div className={(props.openviewer == "1") ? "side-viewer" : "side-viewer side-viewer-close" } /*style={{ transform: `scaleX(${props.openviewer})`}}*/>
+			<div onClick={props.handleViewerClick} className='x-button'>
+				<div className='left-bar' />
+				<div className='right-bar' />
+			</div>
+			<div className="viewer-image-container">
+				<img style={{ opacity: `${(props.openviewer == "1") ? 1: 0}`, transition: `opacity ${(props.openviewer == "1") ? "1.0s": ".2s"} ease-in` }} src={require(`../../media/work/${props.url ? props.url : "featured/featured_01.jpg"}`)}/>
+			</div>
+		</div>
+	);
+}
+
 function Work() {
+	const scrollArr = [];
+	const rowRef = useRef(null);
+
+	const [ workState, setWorkState ] = useState({
+		openViwer: false,
+		viewerUrl: "featured/featured_01.jpg"
+	});
+
+	const handleViewerClick = (event) => {
+		setWorkState({...workState,
+					  openViwer: !workState.openViwer,
+					  viewerUrl: event.currentTarget.getAttribute('url') ? event.currentTarget.getAttribute('url') : workState.viewerUrl
+					});
+		console.log(rowRef);
+	}
+
+	useEffect(() => {
+
+        const debounce = ( func, wait = 20, immediate = true) => {
+			var timeout;
+			return function() {
+				var context = this, args = arguments;
+				var later = function() {
+					timeout = null;
+					if (!immediate) func.apply(context, args);
+				};
+				var callNow = immediate && !timeout;
+				clearTimeout(timeout);
+				timeout = setTimeout(later, wait);
+				if (callNow) func.apply(context, args);
+			};
+		}
+
+        const checkSlide = () => {
+        	scrollArr.forEach((scrollContainer)=> {
+        		let tmp = scrollContainer.querySelector(".row");
+        		if(!tmp)
+        			return;
+        		tmp.childNodes.forEach((containerEle) => {
+        			containerEle.childNodes.forEach((ele) => {
+	        			// let ele = containerEle.children[0];
+	        			if(!ele)
+	        				return;
+	        			let transitionType = ele.getAttribute("scrolltransitiontype");
+		        		if(!transitionType)
+		        			return;
+
+		        		let activateEle = transitionType === "text" ? ele.querySelector("h2") : ele;
+
+		        		let eleYLoc = transitionType === "text" ? ele.querySelector("h2").offsetParent.offsetTop : ele.offsetParent.offsetTop;
+		        		
+		        		if(transitionType === "text")
+		        			eleYLoc+= scrollContainer.offsetTop;
+		        		console.log("\ntransitionType: ",  transitionType);
+		        		console.log("activateEle: ",  activateEle);
+		        		console.log("eleYLoc: ",  eleYLoc);
+
+						// current position of scroll
+						const slideInAt = window.pageYOffset + window.innerHeight;
+						// bottom of the image
+						// const imageBottom = activateEle.offsetTop + activateEle.children[0].offsetHeight;
+						const isHalfShown = slideInAt > eleYLoc + activateEle.offsetHeight/4;
+						const isNotScrolledPast = slideInAt < eleYLoc + activateEle.offsetHeight;
+
+						if (isHalfShown /*&& isNotScrolledPast*/) {
+							// console.log("add: ", activateEle);
+							activateEle.classList.add('active');
+						} else {
+							//activateEle.classList.remove('active');
+						}
+					});
+				});
+			});
+        }
+
+        rowRef.current.childNodes.forEach((node) => {
+        	scrollArr.push(node);
+        });
+
+     //    setTimeout(() => {
+	    //     checkSlide();
+	    // }, 100 );
+        
+        let myFunc = debounce(checkSlide, 20);
+        window.addEventListener('scroll', myFunc);
+        return () => window.removeEventListener('scroll', myFunc);
+    }, [])
+
 	return(
 		<div>
 			<div className='work'>
 				<TopImgBanner />
+				<div className="work-title-container">
+					<div className="work-title">WORK</div>
+				</div>
 				<div className='work-home-link'>
 					<Link to ='/' style={{ textDecoration: 'none', color: 'white' }}>
 						MARGO
 					</Link>
 				</div>
-				<div className="work-title">WORK</div>
 			</div>
 
-			<div className="work-container">
+			<div ref={rowRef} className="work-container">
 				{data.work_list.map((work_item, i) => {
 					return(
 						<Container key={work_item.name} className={work_item.name}>
@@ -37,20 +141,20 @@ function Work() {
 									return(
 										<Col key={data_item.url} className="item" xs={data_item.xs} sm={data_item.sm} md={data_item.md}>
 											{data_item.url.length > 0 &&
-												<div style={{position: "relative"}}>
+												<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`${work_item.name}/${data_item.url}`} style={{position: "relative"}}>
 													<img src={require(`../../media/work/${work_item.name}/${data_item.url}`)}>
 													</img>
 													<div className="image-info-container">
 														<div className='image-info'>
-															<h3>{data_item.info_top_text}</h3>
-															<h5>{data_item.info_bottom_text}</h5>
+															<h4>{data_item.info_top_text}</h4>
+															<p>{data_item.info_bottom_text}</p>
 														</div>
 													</div>
 												</div>
 											}
 											{ data_item.link_class_name && 
-												<div className={data_item.link_class_name}>
-													<Link to ='/play' style={{ textDecoration: 'none', color: 'black' }}>
+												<div scrolltransitiontype="text" className={data_item.link_class_name}>
+													<Link to ='/work/featured' style={{ textDecoration: 'none', color: 'black' }}>
 														<span>
 															<h2 className={`${work_item.name}-header`}>{data_item.header_text}
 																<div className="text-background">
@@ -71,6 +175,7 @@ function Work() {
 				})}
 		
 			</div>
+			<SideViewer handleViewerClick={handleViewerClick} url={workState.viewerUrl} openviewer={ workState.openViwer ? '1' : '0' } />
 		</div>
 
 	);

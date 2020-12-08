@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { About, Home, NotFound, Play, Work, Signin, Signup, Dashboard } from './containers';
+import { About, Home, NotFound, Play, Work, Featured, Signin, Signup, Dashboard } from './containers';
 import './App.css';
 import { getToken } from './Utils/Common';
 //
@@ -16,15 +16,15 @@ import {
 const SideNave = (props) => {
   return(
     <div>
-    <div className='side-nav-bg' style={{transform: `scaleX(${props.textopacity})`}}></div>
-    <div className='side-nav' style={{visibility: `${props.displayvisibility}`, width: `${props.opennav}%`, transitionDelay: `${props.delay}`}}>
-      <ul>
-        <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} exact to='/'>Home</NavLink></li>
-        <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} to='/about'>About</NavLink></li>
-        <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} to='/play'>Play</NavLink></li>
-        <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} to='/work'>Work</NavLink></li>
-      </ul>
-    </div>
+      <div className='side-nav-bg' style={{transform: `scaleX(${props.textopacity})`}}></div>
+      <div className='side-nav' style={{visibility: `${props.displayvisibility}`, width: `${props.opennav}%`, transitionDelay: `${props.delay}`}}>
+        <ul>
+          <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} exact to='/'>Home</NavLink></li>
+          <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} to='/about'>About</NavLink></li>
+          <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} to='/play'>Play</NavLink></li>
+          <li><NavLink className="nav-link" activeClassName="selected" style={{opacity: `${props.textopacity}`, transitionDelay: `${props.delay}`}} onClick={props.handleclick} to='/work'>Work</NavLink></li>
+        </ul>
+      </div>
     </div>
   );
 }
@@ -79,6 +79,7 @@ function PrivateRoute({ component: Component, ...rest }) {
         <Route exact path="/404" component={NotFound} />
         <Route exact path="/play" component={Play} />
         <Route exact path="/work" component={Work} />
+        <Route exact path="/work/featured" component={Featured} />
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
         <PrivateRoute path="/dashboard" component={Dashboard} />

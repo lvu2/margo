@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -13,24 +13,89 @@ const TopVideoContainer = () => {
 }
 
 function Home() {
+	const scrollArr = [];
+	const rowRef = useRef(null);
+
 	const [ state, setState ] = useState({
 		error: null,
 		isLoaded: false,
 		items: []
 	});
 
+	useEffect(() => {
+
+        const debounce = ( func, wait = 20, immediate = true) => {
+			var timeout;
+			return function() {
+				var context = this, args = arguments;
+				var later = function() {
+					timeout = null;
+					if (!immediate) func.apply(context, args);
+				};
+				var callNow = immediate && !timeout;
+				clearTimeout(timeout);
+				timeout = setTimeout(later, wait);
+				if (callNow) func.apply(context, args);
+			};
+		}
+
+        const checkSlide = () => {
+        	scrollArr.forEach((scrollContainer)=> {
+        		let itemEle = scrollContainer.querySelector('.item');
+        		itemEle.childNodes.forEach((containerEle) => {
+        			let transitionType = containerEle.getAttribute("scrolltransitiontype");
+	        		if(!transitionType)
+	        			return;
+
+	        		let activateEle = transitionType === "text" ? containerEle.querySelector("h2") : containerEle;
+
+	        		let eleYLoc = transitionType === "text" ? containerEle.querySelector("h2").offsetParent.offsetTop : containerEle.offsetTop;
+	        		eleYLoc+= scrollContainer.offsetTop;
+
+					// current position of scroll
+					const slideInAt = window.pageYOffset + window.innerHeight;
+					// bottom of the image
+					// const imageBottom = activateEle.offsetTop + activateEle.children[0].offsetHeight;
+					const isHalfShown = slideInAt > eleYLoc + activateEle.offsetHeight/4;
+					const isNotScrolledPast = slideInAt < eleYLoc + activateEle.offsetHeight;
+
+					if (isHalfShown /*&& isNotScrolledPast*/) {
+						// console.log("add: ", activateEle);
+						activateEle.classList.add('active');
+					} else {
+						//activateEle.classList.remove('active');
+					}
+				});
+			});
+        }
+
+        rowRef.current.childNodes.forEach((node) => {
+        	scrollArr.push(node);
+        });
+
+     //    setTimeout(() => {
+	    //     checkSlide();
+	    // }, 100 );
+        
+        let myFunc = debounce(checkSlide, 20);
+        window.addEventListener('scroll', myFunc);
+        return () => window.removeEventListener('scroll', myFunc);
+    }, [])
+
 	return (
 		<div className='home'>
 			<TopVideoContainer/>
-			<div className='margo-title'>MARGO</div>
+			<div className='home-title-container'>
+				<div className='margo-title'>MARGO</div>
+			</div>
 			
-			<div className="home-container">
+			<div ref={rowRef} className="home-container">
 				<Container className="work-link-container">
 					<Row>
 						<Col className="item" xs={12} sm={9} md={8}>
-							<img src={require('../../media/main/Margo-Weathers-Work-Photography-Landing-ThumbnailDS.png')}>
+							<img className={"scroll-img-ele"} scrolltransitiontype="image" src={require('../../media/main/Margo-Weathers-Work-Photography-Landing-ThumbnailDS.png')}>
 							</img>
-							<div className="work-link">
+							<div scrolltransitiontype="text" className="work-link">
 								<Link to ='/work' style={{ textDecoration: 'none', color: 'black' }}>
 									<span>
 										<h2 className="work-header">WORK
@@ -48,9 +113,9 @@ function Home() {
 				<Container className="play-link-container">
 					<Row>
 						<Col className="item" xs={12} sm={{ span: 8, offset: 4 }} md={{ span: 6, offset: 6}}>
-							<img src={require('../../media/main/Margo-Weathers-Play-Collage-Legacy-The-Film-Thumbnail.png')}>
+							<img className={"scroll-img-ele"} scrolltransitiontype="image" src={require('../../media/main/Margo-Weathers-Play-Collage-Legacy-The-Film-Thumbnail.png')}>
 							</img>
-							<div className="play-link">
+							<div scrolltransitiontype="text" className="play-link">
 								<Link to ='/play' style={{ textDecoration: 'none', color: 'black' }}>
 									<span>
 										<h2 className="play-header">PLAY

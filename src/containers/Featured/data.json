@@ -1,0 +1,172 @@
+{
+	"play_list": [
+		{
+			"url": "featured_09.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "HERBAL",
+			"name": "quite-an-eye",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Herbal Essences / Let Life In",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_08.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "DOWNY",
+			"name": "house-call",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Downy / Rip Your Clothes Off",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_10.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "JC PENNEY",
+			"name": "make-cake",
+			"item": "",
+			"effect": "",
+			"info_top_text": "JC Penney / Oscars Campaign",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_11.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "CHANEL",
+			"name": "argh",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Chanel / Venice",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_12.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "MISSONI",
+			"name": "in-the-cards",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Missoni / Spin a Yarn",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_06.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "DOWNY",
+			"name": "gifted",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Downy / Memorable Day",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_13.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "WINNERS",
+			"name": "homeface",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Winners / Big Finds",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_14.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "HERSHEY'S",
+			"name": "woody",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Hershey's / On Everything",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_05.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "GARNIER",
+			"name": "branch-out",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Garnier Nutrisse / Changes",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_01.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "LEGACY",
+			"name": "books",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Legacy: The Thigh High Chapter",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_02.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "ZALES",
+			"name": "branch-out",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Zales / Monroe Collection",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_04.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "COPPERTONE",
+			"name": "books",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Coppertone / Clear",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_07.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "OLAY CRUSH",
+			"name": "branch-out",
+			"item": "",
+			"effect": "",
+			"info_top_text": "Olay / Crush",
+			"info_bottom_text": "VIEW FILM"
+		},
+		{
+			"url": "featured_03.jpg",
+			"xs": 12,
+			"sm": 7,
+			"md": 6,
+			"text": "OLAY NOIR",
+			"name": "books",
+			"item": "-left",
+			"effect": "-right",
+			"info_top_text": "Olay / Noir",
+			"info_bottom_text": "VIEW FILM"
+		}
+	]
+}

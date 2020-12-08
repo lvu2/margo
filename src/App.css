@@ -64,7 +64,8 @@
   transform: rotate(45deg) translate(-15px, -15px);
 }
 
-.side-nav-bg {z-index: 1;
+.side-nav-bg {
+  z-index: 1;
   position: fixed;
   width: 100%;
   text-align:center;
@@ -76,7 +77,8 @@
   transform-origin: right top;top: 0px;
 }
 
-.side-nav {z-index: 2;
+.side-nav {
+  z-index: 2;
   position: fixed;
   width: 0%;
   text-align:center;

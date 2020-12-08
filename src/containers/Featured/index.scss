@@ -1,10 +1,13 @@
 @mixin header-link-style($width) {
 	padding-left: 10px;
+	padding-right: 10px;
 	position: absolute;
 	font-size: 60px;
 	font-family: 'Montserrat', sans-serif;
  	font-weight: 100;
- 	width: $width;
+ 	// width: $width;
+ 	width: fit-content;
+ 	white-space: nowrap;
   	transition: color .4s ease-out;
 }
 
@@ -31,100 +34,24 @@
 	left: auto;
 }
 
-.side-viewer {
-	z-index: 3;
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	text-align: center;
-	background: black;
-  	// transition: transform .3s ease-in;
-  	// transform-origin: left top;
-  	animation: reveal .3s forwards;
-  	top: 0px;
-  	&.side-viewer-close {
-  		// transform-origin: right top;
-  		animation: unreveal .3s forwards;
-  	}
-}
-
-@keyframes reveal {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes unreveal {
-  from {
-    clip-path: inset(0 0 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 100%);
-  }
-}
-
-.viewer-image-container {
-	width: 100vw;
-	height: 100vh;
-	// position: absolute;
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
-	img {
-		// position: absolute;
-		// display : block;
-		vertical-align: middle;
-   		// margin : auto;
-		width: 80%;
-		height: 80%;
-		object-fit: cover;
-	}
-}
-
-.x-button {
-	z-index: 4;
-	top: 100px;
-	right: 100px;
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	.left-bar {
-		width: 80%;
-  		height: 1px;
-  		background-color: white;
-  		-webkit-transform: rotate(-45deg) translate(-27px, 43px);
-  		transform: rotate(-45deg) translate(-27px, 43px);
-	}
-	.right-bar {
-		width: 80%;
-  		height: 1px;
-  		background-color: white;
-  		-webkit-transform: rotate(45deg) translate(42px, 27px);
-  		transform: rotate(45deg) translate(42px, 27px);
-	}
-}
-
-.play {
+.featured-page {
 	width: 100%;
 	height: 615px;
 	position: relative;
 }
 
-.play-home-link {
+.featured-home-link {
 	position: absolute;
 	top: 40px;
 	left: 40px;
-	color: white;
+	color: black;
 	font-size: 40px;
 	font-family: 'Montserrat', sans-serif;
  	font-weight: 100;
 
 }
 
-.play-title-container {
+.featured-title-container{
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -133,24 +60,23 @@
 	display: table;
 	text-align: center;
 	vertical-align: middle;
-	.play-title {
+	.featured-title {
 		// position: absolute;
 		// top: 35%;
 		// left: 40%;
 		display: table-cell;
 		vertical-align: middle;
-		color: white;
+		color: black;
 		font-size: 120px;
 		font-family: 'Montserrat', sans-serif;
 	 	font-weight: 100;
 	}
 }
 
-.top-play-img-banner {
+.top-featured-img-banner {
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
-	object-position: 50% 0;
+	background: #c6d5e6;
 }
 
 .scroll-img-ele {
@@ -177,7 +103,7 @@
 	margin-left: 50%;
 }
 
-.play-text-background{
+.featured-text-background{
 	background-color: white;
 	width: 100%;
 	height: 100%;
@@ -193,7 +119,7 @@
   	}
 }
 
-.play-container {
+.featured-container {
 	padding-top: 95px;
     padding-bottom: 113px;
 	img {
@@ -220,6 +146,7 @@
 	  	clip-path: inset(10px 10px 10px 10px);
 	}
 	&:hover .image-info{
+		cursor: pointer;
 		width: 100%;
 		height: 100%;
 		position: absolute;
@@ -255,6 +182,7 @@
 		@include header-link-style(440px);
   		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -274,6 +202,7 @@
 		@include header-link-style(415px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -293,6 +222,7 @@
 		@include header-link-style(380px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -312,6 +242,7 @@
 		@include header-link-style(195px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -331,6 +262,7 @@
 		@include header-link-style(450px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -350,6 +282,7 @@
 		@include header-link-style(245px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -369,6 +302,7 @@
 		@include header-link-style(380px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -388,6 +322,7 @@
 		@include header-link-style(270px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -407,6 +342,7 @@
 		@include header-link-style(440px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
@@ -426,6 +362,7 @@
 		@include header-link-style(245px);
 		&:hover {
 			color: white;
+			cursor: pointer;
 		}
 		&.active{
 			clip-path: inset(0% 0% 0% 0%);
