@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './index.scss';
 
-function About() {
+function About(props) {
+	useEffect(() => {
+		props.handleBarsColor("white");
+	});
+
 	return(
 		<div className='about'>
 			<p>

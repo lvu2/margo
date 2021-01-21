@@ -175,9 +175,9 @@
 	}
 }
 
-.quite-an-eye-link {
-	@include content-link(17%);
-	.quite-an-eye-header {
+.herbal-link {
+	@include content-link(16%);
+	.herbal-header {
 		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(440px);
   		&:hover {
@@ -191,13 +191,13 @@
 	}
 }
 
-.quite-an-eye-header:hover .text-background-effect{
+.herbal-header:hover .text-background-effect{
 	@include bg-effect(1, 100%, 50%);
 }
 
-.house-call-link {
-	@include content-link(167%);
-	.house-call-header {
+.downy-link {
+	@include content-link(143%);
+	.downy-header {
 		clip-path: inset(0% 100% 0% 0%);
 		@include header-link-style(415px);
 		&:hover {
@@ -211,13 +211,13 @@
 	}
 }
 
-.house-call-header:hover .text-background-effect-right{
+.downy-header:hover .text-background-effect-right{
 	@include bg-effect(1, 0, 50%);
 }
 
-.make-cake-link {
-	@include content-link(17%);
-	.make-cake-header {
+.jc-penney-link {
+	@include content-link(14%);
+	.jc-penney-header {
 		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(380px);
 		&:hover {
@@ -231,13 +231,13 @@
 	}
 }
 
-.make-cake-header:hover .text-background-effect{
+.jc-penney-header:hover .text-background-effect{
 	@include bg-effect(1, 100%, 50%);
 }
 
-.argh-link {
-	@include content-link(130%);
-	.argh-header {
+.chanel-link {
+	@include content-link(145%);
+	.chanel-header {
 		clip-path: inset(0% 100% 0% 0%);
 		@include header-link-style(195px);
 		&:hover {
@@ -251,13 +251,13 @@
 	}
 }
 
-.argh-header:hover .text-background-effect-right{
+.chanel-header:hover .text-background-effect-right{
 	@include bg-effect(1, 0, 50%);
 }
 
-.in-the-cards-link {
+.missoni-link {
 	@include content-link(17%);
-	.in-the-cards-header {
+	.missoni-header {
 		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(450px);
 		&:hover {
@@ -271,13 +271,13 @@
 	}
 }
 
-.in-the-cards-header:hover .text-background-effect{
+.missoni-header:hover .text-background-effect{
 	@include bg-effect(1, 100%, 50%);
 }
 
-.gifted-link {
-	@include content-link(138%);
-	.gifted-header {
+.downy-memorable-day-link {
+	@include content-link(143%);
+	.downy-memorable-day-header {
 		clip-path: inset(0% 100% 0% 0%);
 		@include header-link-style(245px);
 		&:hover {
@@ -291,13 +291,13 @@
 	}
 }
 
-.gifted-header:hover .text-background-effect-right{
+.downy-memorable-day-header:hover .text-background-effect-right{
 	@include bg-effect(1, 0, 50%);
 }
 
-.homeface-link {
+.winners-link {
 	@include content-link(17%);
-	.homeface-header {
+	.winners-header {
 		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(380px);
 		&:hover {
@@ -311,13 +311,13 @@
 	}
 }
 
-.homeface-header:hover .text-background-effect{
+.winners-header:hover .text-background-effect{
 	@include bg-effect(1, 100%, 50%);
 }
 
-.woody-link {
-	@include content-link(142%);
-	.woody-header {
+.hersheys-link {
+	@include content-link(159%);
+	.hersheys-header {
 		clip-path: inset(0% 100% 0% 0%);
 		@include header-link-style(270px);
 		&:hover {
@@ -331,13 +331,13 @@
 	}
 }
 
-.woody-header:hover .text-background-effect-right{
+.hersheys-header:hover .text-background-effect-right{
 	@include bg-effect(1, 0, 50%);
 }
 
-.branch-out-link {
-	@include content-link(17%);
-	.branch-out-header {
+.garnier-link {
+	@include content-link(15%);
+	.garnier-header {
 		clip-path: inset(0% 0% 0% 100%);
 		@include header-link-style(440px);
 		&:hover {
@@ -351,13 +351,13 @@
 	}
 }
 
-.branch-out-header:hover .text-background-effect{
+.garnier-header:hover .text-background-effect{
 	@include bg-effect(1, 100%, 50%);
 }
 
-.books-link {
-	@include content-link(138%);
-	.books-header {
+.legacy-link {
+	@include content-link(141%);
+	.legacy-header {
 		clip-path: inset(0% 100% 0% 0%);
 		@include header-link-style(245px);
 		&:hover {
@@ -371,6 +371,86 @@
 	}
 }
 
-.books-header:hover .text-background-effect-right{
+.legacy-header:hover .text-background-effect-right{
+	@include bg-effect(1, 0, 50%);
+}
+
+.zales-link {
+	@include content-link(15%);
+	.zales-header {
+		clip-path: inset(0% 0% 0% 100%);
+		@include header-link-style(440px);
+		&:hover {
+			color: white;
+			cursor: pointer;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
+		}
+	}
+}
+
+.zales-header:hover .text-background-effect{
+	@include bg-effect(1, 100%, 50%);
+}
+
+.coppertone-link {
+	@include content-link(174%);
+	.coppertone-header {
+		clip-path: inset(0% 100% 0% 0%);
+		@include header-link-style(245px);
+		&:hover {
+			color: white;
+			cursor: pointer;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
+		}
+	}
+}
+
+.coppertone-header:hover .text-background-effect-right{
+	@include bg-effect(1, 0, 50%);
+}
+
+.olay-crush-link {
+	@include content-link(16%);
+	.olay-crush-header {
+		clip-path: inset(0% 0% 0% 100%);
+		@include header-link-style(440px);
+		&:hover {
+			color: white;
+			cursor: pointer;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
+		}
+	}
+}
+
+.olay-crush-header:hover .text-background-effect{
+	@include bg-effect(1, 100%, 50%);
+}
+
+.olay-noir-link {
+	@include content-link(157%);
+	.olay-noir-header {
+		clip-path: inset(0% 100% 0% 0%);
+		@include header-link-style(245px);
+		&:hover {
+			color: white;
+			cursor: pointer;
+		}
+		&.active{
+			clip-path: inset(0% 0% 0% 0%);
+			transition: clip-path 1s ease-in, color .4s ease-out;
+		}
+	}
+}
+
+.olay-noir-header:hover .text-background-effect-right{
 	@include bg-effect(1, 0, 50%);
 }

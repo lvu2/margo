@@ -1,17 +1,20 @@
 @mixin header-link-style($width) {
 	padding-left: 10px;
+	padding-right: 10px;
 	position: absolute;
 	font-size: 60px;
 	font-family: 'Montserrat', sans-serif;
  	font-weight: 100;
- 	width: $width;
+ 	// width: $width;
+ 	width: fit-content;
+ 	white-space: nowrap;
   	transition: color .4s ease-out;
 }
 
  @mixin bg-effect($scale, $x-origin, $y-origin) {
 	background-color: black;
-	width: 100%;
-	height: 100%;
+	width: 101%;
+	height: 101%;
 	top: 0;
 	left: 0;
 	position: absolute; 

@@ -1,10 +1,13 @@
 @mixin header-link-style($width) {
 	padding-left: 10px;
+	padding-right: 10px;
 	position: absolute;
 	font-size: 60px;
 	font-family: 'Montserrat', sans-serif;
  	font-weight: 100;
- 	width: $width;
+ 	// width: $width;
+ 	width: fit-content;
+ 	white-space: nowrap;
   	transition: color .4s ease-out;
 }
 
@@ -46,6 +49,38 @@
   		// transform-origin: right top;
   		animation: unreveal .3s forwards;
   	}
+  	.side-viewer-title {
+  		position: absolute;
+  		top: 0px;
+  		color: white;
+  		width: 100%;
+  		height: 15%;
+		font-size: 60px;
+		font-family: 'Montserrat', sans-serif;
+	 	font-weight: 100;
+		display: table;
+		h3 {
+			display: table-cell;
+			vertical-align: middle;
+		}
+  	}
+  	.side-viewer-home-text-container {
+  		position: absolute;
+  		top: 0px;
+  		color: white;
+  		width: 85%;
+  		left: 7.5%;
+  		height: 15%;
+		font-size: 40px;
+		font-family: 'Montserrat', sans-serif;
+	 	font-weight: 100;
+		display: table;
+		.side-viewer-home-text {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: left;
+		}
+  	}
 }
 
 @keyframes reveal {
@@ -79,19 +114,23 @@
 		vertical-align: middle;
    		// margin : auto;
 		width: 80%;
-		height: 80%;
+		height: 70%;
 		object-fit: cover;
 	}
 }
 
 .x-button {
+	cursor: pointer;
 	z-index: 4;
-	top: 100px;
-	right: 100px;
-	width: 100px;
-	height: 100px;
+	top: 50px;
+	right: 50px;
+	width: 50px;
+	height: 50px;
 	position: absolute;
 	.left-bar {
+		position: absolute;
+		top: -25px;
+		left: -8px;
 		width: 80%;
   		height: 1px;
   		background-color: white;
@@ -99,6 +138,9 @@
   		transform: rotate(-45deg) translate(-27px, 43px);
 	}
 	.right-bar {
+		position: absolute;
+		top: -24px;
+		left: -6px;
 		width: 80%;
   		height: 1px;
   		background-color: white;
@@ -249,6 +291,7 @@
 }
 
 .quite-an-eye-link {
+	cursor: pointer;
 	@include content-link(17%);
 	.quite-an-eye-header {
 		clip-path: inset(0% 0% 0% 100%);
@@ -268,6 +311,7 @@
 }
 
 .house-call-link {
+	cursor: pointer;
 	@include content-link(167%);
 	.house-call-header {
 		clip-path: inset(0% 100% 0% 0%);
@@ -287,6 +331,7 @@
 }
 
 .make-cake-link {
+	cursor: pointer;
 	@include content-link(17%);
 	.make-cake-header {
 		clip-path: inset(0% 0% 0% 100%);
@@ -306,6 +351,7 @@
 }
 
 .argh-link {
+	cursor: pointer;
 	@include content-link(130%);
 	.argh-header {
 		clip-path: inset(0% 100% 0% 0%);
@@ -325,6 +371,7 @@
 }
 
 .in-the-cards-link {
+	cursor: pointer;
 	@include content-link(17%);
 	.in-the-cards-header {
 		clip-path: inset(0% 0% 0% 100%);
@@ -344,6 +391,7 @@
 }
 
 .gifted-link {
+	cursor: pointer;
 	@include content-link(138%);
 	.gifted-header {
 		clip-path: inset(0% 100% 0% 0%);
@@ -363,6 +411,7 @@
 }
 
 .homeface-link {
+	cursor: pointer;
 	@include content-link(17%);
 	.homeface-header {
 		clip-path: inset(0% 0% 0% 100%);
@@ -382,6 +431,7 @@
 }
 
 .woody-link {
+	cursor: pointer;
 	@include content-link(142%);
 	.woody-header {
 		clip-path: inset(0% 100% 0% 0%);
@@ -401,6 +451,7 @@
 }
 
 .branch-out-link {
+	cursor: pointer;
 	@include content-link(17%);
 	.branch-out-header {
 		clip-path: inset(0% 0% 0% 100%);
@@ -420,6 +471,7 @@
 }
 
 .books-link {
+	cursor: pointer;
 	@include content-link(138%);
 	.books-header {
 		clip-path: inset(0% 100% 0% 0%);

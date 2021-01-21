@@ -51,17 +51,20 @@
 .change.bar1 {
   -webkit-transform: rotate(-45deg) translate(-14px, 13px);
   transform: rotate(-45deg) translate(-14px, 13px);
+  background-color: white !important;
 }
 
 .change.bar2 {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  background-color: white !important;
   opacity: 0;
 }
 
 .change.bar3 {
   -webkit-transform: rotate(45deg) translate(-15px, -15px);
   transform: rotate(45deg) translate(-15px, -15px);
+  background-color: white !important;
 }
 
 .side-nav-bg {

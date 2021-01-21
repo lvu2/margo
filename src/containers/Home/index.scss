@@ -106,12 +106,15 @@
 	left: auto;
 	.work-header {
 		padding-left: 10px;
+		padding-right: 10px;
 		position: absolute;
 		right: -6%;
 		font-size: 60px;
 		font-family: 'Montserrat', sans-serif;
 	 	font-weight: 100;
-		width: 220px;
+		// width: 220px;
+ 		width: fit-content;
+ 		white-space: nowrap;
 	  	transition: color .6s ease-out;
 	  	clip-path: inset(0% 0% 0% 100%);
 		&.active{
@@ -123,12 +126,15 @@
 
 .work-header:hover {
 	padding-left: 10px;
+	padding-right: 10px;
 	position: absolute;
 	right: -6%;
 	font-size: 60px;
 	font-family: 'Montserrat', sans-serif;
  	font-weight: 100;
-	width: 220px;
+	// width: 220px;
+	width: fit-content;
+ 	white-space: nowrap;
 	color: white;
   	transition: color .6s ease-out;
 }
@@ -162,11 +168,14 @@
 	left: auto;
 	.play-header {
 		padding-left: 10px;
+		padding-right: 10px;
 		position: absolute;
 		font-size: 60px;
 		font-family: 'Montserrat', sans-serif;
 	 	font-weight: 100;
-		width: 170px;
+		// width: 170px;
+		width: fit-content;
+ 		white-space: nowrap;
 	  	transition: color .6s ease-out;
 	  	clip-path: inset(0% 100% 0% 0%);
 		&.active{
@@ -185,11 +194,14 @@
 
 .play-header:hover {
 	padding-left: 10px;
+	padding-right: 10px;
 	position: absolute;
 	font-size: 60px;
 	font-family: 'Montserrat', sans-serif;
  	font-weight: 100;
-	width: 170px;
+	// width: 170px;
+	width: fit-content;
+ 	white-space: nowrap;
 	color: white;
   	transition: color .6s ease-out;
 }

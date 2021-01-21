@@ -18,36 +18,41 @@ const TopImgBanner = () => {
 const SideViewer = (props) => {
 	return(
 		<div className={(props.openviewer == "1") ? "side-viewer" : "side-viewer side-viewer-close" } /*style={{ transform: `scaleX(${props.openviewer})`}}*/>
-			<div onClick={props.handleViewerClick} className='x-button'>
+			<div style={{ opacity: `${(props.openviewer == "1") ? 1: 0}`}}  onClick={props.handleViewerClick} className='x-button'>
 				<div className='left-bar' />
 				<div className='right-bar' />
 			</div>
 			<div className="viewer-image-container">
 				<img style={{ opacity: `${(props.openviewer == "1") ? 1: 0}`, transition: `opacity ${(props.openviewer == "1") ? "1.0s": ".2s"} ease-in` }} src={require(`../../media/work/${props.url ? props.url : "featured/featured_01.jpg"}`)}/>
 			</div>
+			<div className="side-viewer-title"><h3>{props.imgText}</h3></div>
+			<div className="side-viewer-home-text-container"><div className="side-viewer-home-text"><Link to ='/' style={{ textDecoration: 'none', color: 'white' }}>MARGO</Link></div></div>
 		</div>
 	);
 }
 
-function Work() {
+function Work(props) {
 	const scrollArr = [];
 	const rowRef = useRef(null);
 
 	const [ workState, setWorkState ] = useState({
 		openViwer: false,
-		viewerUrl: "featured/featured_01.jpg"
+		viewerUrl: "featured/featured_01.jpg",
+		text: ""
 	});
 
 	const handleViewerClick = (event) => {
 		setWorkState({...workState,
 					  openViwer: !workState.openViwer,
-					  viewerUrl: event.currentTarget.getAttribute('url') ? event.currentTarget.getAttribute('url') : workState.viewerUrl
+					  viewerUrl: event.currentTarget.getAttribute('url') ? event.currentTarget.getAttribute('url') : workState.viewerUrl,
+					  text: event.currentTarget.getAttribute('imgtext') ? event.currentTarget.getAttribute('imgtext') : ""
 					});
 		console.log(rowRef);
 	}
 
 	useEffect(() => {
-
+		props.handleBarsColor("white");
+		window.scrollTo(0, 0);
         const debounce = ( func, wait = 20, immediate = true) => {
 			var timeout;
 			return function() {
@@ -83,9 +88,6 @@ function Work() {
 		        		
 		        		if(transitionType === "text")
 		        			eleYLoc+= scrollContainer.offsetTop;
-		        		console.log("\ntransitionType: ",  transitionType);
-		        		console.log("activateEle: ",  activateEle);
-		        		console.log("eleYLoc: ",  eleYLoc);
 
 						// current position of scroll
 						const slideInAt = window.pageYOffset + window.innerHeight;
@@ -141,7 +143,7 @@ function Work() {
 									return(
 										<Col key={data_item.url} className="item" xs={data_item.xs} sm={data_item.sm} md={data_item.md}>
 											{data_item.url.length > 0 &&
-												<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`${work_item.name}/${data_item.url}`} style={{position: "relative"}}>
+												<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`${work_item.name}/${data_item.url}`} imgtext={data_item.info_top_text} style={{position: "relative"}}>
 													<img src={require(`../../media/work/${work_item.name}/${data_item.url}`)}>
 													</img>
 													<div className="image-info-container">
@@ -175,7 +177,7 @@ function Work() {
 				})}
 		
 			</div>
-			<SideViewer handleViewerClick={handleViewerClick} url={workState.viewerUrl} openviewer={ workState.openViwer ? '1' : '0' } />
+			<SideViewer handleViewerClick={handleViewerClick} imgText={workState.text} url={workState.viewerUrl} openviewer={ workState.openViwer ? '1' : '0' } />
 		</div>
 
 	);

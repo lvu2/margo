@@ -12,7 +12,7 @@ const TopVideoContainer = () => {
 	)
 }
 
-function Home() {
+function Home(props) {
 	const scrollArr = [];
 	const rowRef = useRef(null);
 
@@ -23,7 +23,8 @@ function Home() {
 	});
 
 	useEffect(() => {
-
+		props.handleBarsColor("white");
+		window.scrollTo(0, 0);
         const debounce = ( func, wait = 20, immediate = true) => {
 			var timeout;
 			return function() {

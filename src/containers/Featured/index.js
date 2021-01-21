@@ -18,7 +18,7 @@ const TopImgBanner = () => {
 const SideViewer = (props) => {
 	return(
 		<div className={(props.openviewer == "1") ? "side-viewer" : "side-viewer side-viewer-close" } /*style={{ transform: `scaleX(${props.openviewer})`}}*/>
-			<div onClick={props.handleViewerClick} className='x-button'>
+			<div onClick={props.handleViewerClick} className='x-button' style={{ opacity: `${(props.openviewer == "1") ? 1: 0}`}}>
 				<div className='left-bar' />
 				<div className='right-bar' />
 			</div>
@@ -26,28 +26,33 @@ const SideViewer = (props) => {
 				<img style={{ opacity: `${(props.openviewer == "1") ? 1: 0}`, transition: `opacity ${(props.openviewer == "1") ? "1.0s": ".2s"} ease-in` }} src={require(`../../media/work/${props.url ? props.url : "featured/featured_01.jpg"}`)}>
 				</img>
 			</div>
+			<div className="side-viewer-title"><h3>{props.imgText}</h3></div>
+			<div className="side-viewer-home-text-container"><div className="side-viewer-home-text"><Link to ='/' style={{ textDecoration: 'none', color: 'white' }}>MARGO</Link></div></div>
 		</div>
 	);
 }
 
-function Featured() {
+function Featured(props) {
 	const scrollArr = [];
 	const rowRef = useRef(null);
 
 	const [ featuredState, setFeaturedState ] = useState({
 		openViwer: false,
-		viewerUrl: "featured/featured_01.jpg"
+		viewerUrl: "featured/featured_01.jpg",
+		text: ""
 	});
 
 	const handleViewerClick = (event) => {
 		setFeaturedState({...featuredState,
 					  openViwer: !featuredState.openViwer,
-					  viewerUrl: event.currentTarget.getAttribute('url') ? event.currentTarget.getAttribute('url') : featuredState.viewerUrl
+					  viewerUrl: event.currentTarget.getAttribute('url') ? event.currentTarget.getAttribute('url') : featuredState.viewerUrl,
+					  text: event.currentTarget.getAttribute('imgtext') ? event.currentTarget.getAttribute('imgtext') : ""
 					});
 	}
 
 	useEffect(() => {
-
+		props.handleBarsColor("black");
+		window.scrollTo(0, 0);
         const debounce = ( func, wait = 20, immediate = true) => {
 			var timeout;
 			return function() {
@@ -124,7 +129,7 @@ function Featured() {
 					{data.play_list.map((play_item, i) => {
 						return(
 							<Col key={play_item.url} className={`item${play_item.item}`} xs={12} sm={7} md={6}>
-								<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`featured/${play_item.url}`} style={{position: "relative"}}>
+								<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`featured/${play_item.url}`} imgtext={play_item.text}  style={{position: "relative"}}>
 									<img src={require(`../../media/work/featured/${play_item.url}`)}>
 									</img>
 									<div className="image-info-container">
@@ -134,7 +139,7 @@ function Featured() {
 										</div>
 									</div>
 								</div>
-								<div scrolltransitiontype="text" onClick={handleViewerClick} url={`featured/${play_item.url}`} className={`${play_item.name}-link`}>
+								<div scrolltransitiontype="text" onClick={handleViewerClick} url={`featured/${play_item.url}`} imgtext={play_item.text}  className={`${play_item.name}-link`}>
 									<div style={{ textDecoration: 'none', color: 'black' }}>
 										<span>
 											<h2 className={`${play_item.name}-header`}>{play_item.text}
@@ -151,7 +156,7 @@ function Featured() {
 					})}
 				</Row>
 			</Container>
-			<SideViewer handleViewerClick={handleViewerClick} url={featuredState.viewerUrl} openviewer={ featuredState.openViwer ? '1' : '0' } />
+			<SideViewer handleViewerClick={handleViewerClick} imgText={featuredState.text} url={featuredState.viewerUrl} openviewer={ featuredState.openViwer ? '1' : '0' } />
 		</div>
 	)
 }
