@@ -97,7 +97,7 @@ function PrivateRoute({ component: Component, ...rest }) {
             <Work {...props} handleBarsColor={handleBarsColor} />
           )}
         />
-        <Route exact path='/work/featured' render={(props) => (
+        <Route exact path='/work/:featured' render={(props) => (
             <Featured {...props} handleBarsColor={handleBarsColor} />
           )}
         />

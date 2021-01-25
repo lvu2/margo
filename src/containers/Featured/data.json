@@ -1,172 +1,573 @@
 {
-	"play_list": [
-		{
-			"url": "featured_09.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "HERBAL",
-			"name": "herbal",
-			"item": "",
-			"effect": "",
-			"info_top_text": "Herbal Essences / Let Life In",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_08.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "DOWNY",
-			"name": "downy",
-			"item": "-left",
-			"effect": "-right",
-			"info_top_text": "Downy / Rip Your Clothes Off",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_10.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "JC PENNEY",
-			"name": "jc-penney",
-			"item": "",
-			"effect": "",
-			"info_top_text": "JC Penney / Oscars Campaign",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_11.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "CHANEL",
-			"name": "chanel",
-			"item": "-left",
-			"effect": "-right",
-			"info_top_text": "Chanel / Venice",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_12.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "MISSONI",
-			"name": "missoni",
-			"item": "",
-			"effect": "",
-			"info_top_text": "Missoni / Spin a Yarn",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_06.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "DOWNY",
-			"name": "downy-memorable-day",
-			"item": "-left",
-			"effect": "-right",
-			"info_top_text": "Downy / Memorable Day",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_13.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "WINNERS",
-			"name": "winners",
-			"item": "",
-			"effect": "",
-			"info_top_text": "Winners / Big Finds",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_14.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "HERSHEY'S",
-			"name": "hersheys",
-			"item": "-left",
-			"effect": "-right",
-			"info_top_text": "Hershey's / On Everything",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_05.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "GARNIER",
-			"name": "garnier",
-			"item": "",
-			"effect": "",
-			"info_top_text": "Garnier Nutrisse / Changes",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_01.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "LEGACY",
-			"name": "legacy",
-			"item": "-left",
-			"effect": "-right",
-			"info_top_text": "Legacy: The Thigh High Chapter",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_02.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "ZALES",
-			"name": "zales",
-			"item": "",
-			"effect": "",
-			"info_top_text": "Zales / Monroe Collection",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_04.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "COPPERTONE",
-			"name": "coppertone",
-			"item": "-left",
-			"effect": "-right",
-			"info_top_text": "Coppertone / Clear",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_07.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "OLAY CRUSH",
-			"name": "olay-crush",
-			"item": "",
-			"effect": "",
-			"info_top_text": "Olay / Crush",
-			"info_bottom_text": "VIEW FILM"
-		},
-		{
-			"url": "featured_03.jpg",
-			"xs": 12,
-			"sm": 7,
-			"md": 6,
-			"text": "OLAY NOIR",
-			"name": "olay-noir",
-			"item": "-left",
-			"effect": "-right",
-			"info_top_text": "Olay / Noir",
-			"info_bottom_text": "VIEW FILM"
-		}
-	]
+	"MONTAGE": {
+		"play_list": [
+			{
+				"url": "montage_01.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "MONTAGE",
+				"name": "herbal",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Montage Reel",
+				"info_bottom_text": "VIEW FILM"
+			}
+		],
+		"banner_color": "#c6d5e6"
+	},
+	"FEATURED": {
+		"play_list": [
+			{
+				"url": "featured_09.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "HERBAL",
+				"name": "herbal",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Herbal Essences / Let Life In",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_08.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "DOWNY",
+				"name": "downy",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Downy / Rip Your Clothes Off",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_10.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "JC PENNEY",
+				"name": "jc-penney",
+				"item": "",
+				"effect": "",
+				"info_top_text": "JC Penney / Oscars Campaign",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_11.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "CHANEL",
+				"name": "chanel",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Chanel / Venice",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_12.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "MISSONI",
+				"name": "missoni",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Missoni / Spin a Yarn",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_06.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "DOWNY",
+				"name": "downy-memorable-day",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Downy / Memorable Day",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_13.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "WINNERS",
+				"name": "winners",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Winners / Big Finds",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_14.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "HERSHEY'S",
+				"name": "hersheys",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Hershey's / On Everything",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_05.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "GARNIER",
+				"name": "garnier",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Garnier Nutrisse / Changes",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_01.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "LEGACY",
+				"name": "legacy",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Legacy: The Thigh High Chapter",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_02.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "ZALES",
+				"name": "zales",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Zales / Monroe Collection",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_04.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "COPPERTONE",
+				"name": "coppertone",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Coppertone / Clear",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_07.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "OLAY CRUSH",
+				"name": "olay-crush",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Olay / Crush",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "featured_03.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "OLAY NOIR",
+				"name": "olay-noir",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Olay / Noir",
+				"info_bottom_text": "VIEW FILM"
+			}
+		],
+		"banner_color": "#c6d5e6"
+	},
+	"BEAUTY": {
+		"play_list": [
+			{
+				"url": "beauty_01.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "OLAY",
+				"name": "herbal",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Olay / Regernerist",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_02.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "CLAIROL",
+				"name": "downy",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Clairol / Bloom",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_03.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "YORK",
+				"name": "jc-penney",
+				"item": "",
+				"effect": "",
+				"info_top_text": "York / Juno",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_04.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "NM",
+				"name": "chanel",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Neiman Marcus / Fragrance",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_05.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "OLAY",
+				"name": "missoni",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Olay / Glow",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_06.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "HDO",
+				"name": "downy-memorable-day",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Histoire d' Or / The Thank You",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_07.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "CLINIQUE",
+				"name": "winners",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Clinique / Can Can",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_08.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "CLAIROL",
+				"name": "hersheys",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Clairol / A Shade Braver",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_09.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "OLAY",
+				"name": "garnier",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Olay / Eyes",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "beauty_10.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "OLAY",
+				"name": "legacy",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Olay / Whips",
+				"info_bottom_text": "VIEW FILM"
+			}
+		],
+		"banner_color" : "#f2e8e2"
+	},
+	"SPECIALTY": {
+		"play_list": [
+			{
+				"url": "specialty_01.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "NM",
+				"name": "herbal",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Neiman Marcus / Art of Play",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "specialty_02.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "R SPEKTOR",
+				"name": "downy",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Regina Spektor / How",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "specialty_03.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "PHAT ALBERT",
+				"name": "jc-penney",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Neiman Marcus / Phat Albert",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "specialty_04.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "ULTRA",
+				"name": "chanel",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Ulta / Trading Faces",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "specialty_05.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "JC PENNEY",
+				"name": "missoni",
+				"item": "",
+				"effect": "",
+				"info_top_text": "JC Penney / CMA",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "specialty_06.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "NM",
+				"name": "downy-memorable-day",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Neiman Marcus / Split Decision",
+				"info_bottom_text": "VIEW FILM"
+			}
+		],
+		"banner_color": "#e0eceb"
+	},
+	"EDITORIAL": {
+		"play_list": [
+			{
+				"url": "editorial_01.png",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "LEGACY",
+				"name": "herbal",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Legacy",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "editorial_02.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "MAN UP",
+				"name": "downy",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Man Up",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "editorial_03.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "BIKE",
+				"name": "jc-penney",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Bike",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "editorial_04.png",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "BREW",
+				"name": "chanel",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Brew",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "editorial_05.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "CEREAL NUMBER",
+				"name": "missoni",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Cereal Number",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "editorial_06.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "A+U",
+				"name": "downy-memorable-day",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "A+U",
+				"info_bottom_text": "VIEW FILM"
+			}
+		],
+		"banner_color": "#e4e2e2"
+
+	},
+	"CAMPAIGN": {
+		"play_list": [
+			{
+				"url": "campaign_01.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "ZALES",
+				"name": "herbal",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Zales",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "campaign_02.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "FEED",
+				"name": "downy",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Feed",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "campaign_03.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "AXE",
+				"name": "jc-penney",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Axe",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "campaign_04.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "GO SCOUT",
+				"name": "chanel",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Go Scout",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "campaign_05.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "NM THE BOOK",
+				"name": "missoni",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Neiman Marcus The Book",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "campaign_06.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "SKIN",
+				"name": "downy-memorable-day",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Skin",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "campaign_07.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "KOHL'S",
+				"name": "winners",
+				"item": "",
+				"effect": "",
+				"info_top_text": "Kohl's",
+				"info_bottom_text": "VIEW FILM"
+			},
+			{
+				"url": "campaign_08.jpg",
+				"xs": 12,
+				"sm": 7,
+				"md": 6,
+				"text": "DOWNY",
+				"name": "hersheys",
+				"item": "-left",
+				"effect": "-right",
+				"info_top_text": "Downy",
+				"info_bottom_text": "VIEW FILM"
+			}
+		],
+		"banner_color": "#f7f0df"
+	}
 }

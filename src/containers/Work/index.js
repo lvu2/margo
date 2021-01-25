@@ -156,7 +156,7 @@ function Work(props) {
 											}
 											{ data_item.link_class_name && 
 												<div scrolltransitiontype="text" className={data_item.link_class_name}>
-													<Link to ='/work/featured' style={{ textDecoration: 'none', color: 'black' }}>
+													<Link to ={`/work/${data_item.header_text}`} style={{ textDecoration: 'none', color: 'black' }}>
 														<span>
 															<h2 className={`${work_item.name}-header`}>{data_item.header_text}
 																<div className="text-background">

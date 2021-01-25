@@ -8,9 +8,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 
-const TopImgBanner = () => {
+const TopImgBanner = (props) => {
 	return (
-		<div className='top-featured-img-banner'>
+		<div className='top-featured-img-banner' style={{background: `${props.bannerColor}`}}>
 		</div>
 	);
 }
@@ -37,6 +37,9 @@ function Featured(props) {
 	const rowRef = useRef(null);
 
 	const [ featuredState, setFeaturedState ] = useState({
+		pageData: data[props.match.params.featured].play_list,
+		pageName: props.match.params.featured.toLowerCase(),
+		bannerColor: data[props.match.params.featured].banner_color,
 		openViwer: false,
 		viewerUrl: "featured/featured_01.jpg",
 		text: ""
@@ -51,6 +54,10 @@ function Featured(props) {
 	}
 
 	useEffect(() => {
+		// setFeaturedState({...featuredState,
+		// 					pageData: data[props.match.params.featured].play_list,
+		// 					pageName: props.match.params.featured.toLowerCase()
+		// 				});
 		props.handleBarsColor("black");
 		window.scrollTo(0, 0);
         const debounce = ( func, wait = 20, immediate = true) => {
@@ -113,9 +120,9 @@ function Featured(props) {
 	return (
 		<div>
 			<div className='featured-page'>
-				<TopImgBanner />
+				<TopImgBanner bannerColor={featuredState.bannerColor} />
 				<div className='featured-title-container'>
-					<div className='featured-title'>FEATURED</div>
+					<div className='featured-title'>{`${featuredState.pageName.toUpperCase()}`}</div>
 				</div>
 				<div className='featured-home-link'>
 					<Link to ='/' style={{ textDecoration: 'none', color: 'black' }}>
@@ -126,11 +133,11 @@ function Featured(props) {
 
 			<Container className="featured-container">
 				<Row ref={rowRef}>
-					{data.play_list.map((play_item, i) => {
+					{featuredState.pageData.map((play_item, i) => {
 						return(
 							<Col key={play_item.url} className={`item${play_item.item}`} xs={12} sm={7} md={6}>
-								<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`featured/${play_item.url}`} imgtext={play_item.text}  style={{position: "relative"}}>
-									<img src={require(`../../media/work/featured/${play_item.url}`)}>
+								<div className={"scroll-img-ele"} scrolltransitiontype="image" onClick={handleViewerClick} url={`${featuredState.pageName}/${play_item.url}`} imgtext={play_item.text}  style={{position: "relative"}}>
+									<img src={require(`../../media/work/${featuredState.pageName}/${play_item.url}`)}>
 									</img>
 									<div className="image-info-container">
 										<div className='image-info'>
@@ -139,7 +146,7 @@ function Featured(props) {
 										</div>
 									</div>
 								</div>
-								<div scrolltransitiontype="text" onClick={handleViewerClick} url={`featured/${play_item.url}`} imgtext={play_item.text}  className={`${play_item.name}-link`}>
+								<div scrolltransitiontype="text" onClick={handleViewerClick} url={`${featuredState.pageName}/${play_item.url}`} imgtext={play_item.text}  className={`${play_item.name}-link`}>
 									<div style={{ textDecoration: 'none', color: 'black' }}>
 										<span>
 											<h2 className={`${play_item.name}-header`}>{play_item.text}
